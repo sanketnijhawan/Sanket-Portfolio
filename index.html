@@ -1098,6 +1098,20 @@
           </figure>
         </section>
 
+
+          <!-- Emailjs -->
+
+            <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+            (function(){
+            emailjs.init({
+            publicKey: "YOUR_PUBLIC_KEY",
+            });
+            })();
+            </script>
+
         <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
@@ -1105,27 +1119,26 @@
           <form action="#" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" id="fullName" class="form-input" placeholder="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" id="email_id" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <textarea id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            
+            <button class="form-btn" type="submit" disabled data-form-btn onclick="SendMail()">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
+            
+
+            
 
           </form>
 
         </section>
 
-        <!-- EmailJS SDK -->
-              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.4.0/dist/email.min.js"></script>
-              <script type="text/javascript">
-              emailjs.init('Mp5hatxGAhmyhI6pe'); // Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
-          </script>
+          
 
       </article>
 

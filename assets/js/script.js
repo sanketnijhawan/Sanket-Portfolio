@@ -1,6 +1,6 @@
 'use strict';
 
-emailjs.init('Mp5hatxGAhmyhI6pe');
+emailjs.init('Mp5hatxGAhmyhI6pe'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -120,6 +120,20 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
+
+// SendMail function
+function SendMail(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Send the form data using EmailJS
+  emailjs.sendForm('service_413', 'template_413', form)
+    .then(function(response) {
+      alert('Message sent successfully!');
+    }, function(error) {
+      alert('Failed to send message, please try again.');
+    });
+}
+
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
@@ -157,21 +171,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-
-  // Handle contact form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
-
-  // Send the form data using EmailJS
-  emailjs.sendForm('service_413', 'template_413', this)
-    .then(function(response) {
-      alert('Message sent successfully!');
-    }, function(error) {
-      alert('Failed to send message, please try again.');
-    });
-})
-})
