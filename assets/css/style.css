@@ -1419,6 +1419,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   .avatar-box { border-radius: 30px; }
 
   .avatar-box img { width: 120px; }
+  /* Keyframes for subtle scale animation */
+@keyframes subtle-scale {
+  0%, 100% {
+    transform: scale(1);   /* Normal size at the start and end */
+  }
+  50% {
+    transform: scale(1.05); /* Slightly grow in the middle */
+  }
+}
+
+/* Apply the animation to the avatar */
+.professional-avatar {
+  animation: subtle-scale 3s ease-in-out infinite;  /* Smooth 3-second pulse, continuous */
+  width: 120px;              /* Keep the same width */
+  border-radius: 40px;      /* Keep the same border-radius */
+  transition: transform 0.3s ease;
+
+}
+
 
   .info-content .name { margin-bottom: 15px; }
 
