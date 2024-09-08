@@ -1,6 +1,5 @@
 'use strict';
 
-emailjs.init('Mp5hatxGAhmyhI6pe'); // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -121,19 +120,6 @@ const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
 
-// SendMail function
-function SendMail() {
-  event.preventDefault(); // Prevent the default form submission
-
-  // Send the form data using EmailJS
-  emailjs.sendForm('service_413', 'template_413', form)
-    .then(function(response) {
-      alert('Message sent successfully!');
-    }, function(error) {
-      alert('Failed to send message, please try again.');
-    });
-}
-
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
@@ -148,6 +134,40 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
+    // Emailjs
+const sendMail = () => {
+  const params = {
+    name: document.getElementById("fullName").value,
+    email: document.getElementById("email_id").value,
+    message: document.getElementById("message").value,
+  };
+
+ 
+
+  const serviceID = "service_413";
+  const templateID = "template_dvgicpt";
+
+  emailjs.send(serviceID, templateID, params)
+    .then(res => {
+      document.getElementById("fullName").value = "";
+      document.getElementById("email_id").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Your message sent successfully!!");
+    })
+    .catch(err => console.log(err));
+};
+
+formInputs.forEach(input => {
+  input.addEventListener("input", () => {
+    formBtn.disabled = !form.checkValidity();
+  });
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  sendMail();
+});
 
 
 // page navigation variables
@@ -168,6 +188,6 @@ for (let i = 0; i < navigationLinks.length; i++) {
         navigationLinks[i].classList.remove("active");
       }
     }
-
+    
   });
 }

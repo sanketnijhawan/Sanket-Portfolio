@@ -1100,18 +1100,18 @@
 
 
           <!-- Emailjs -->
-
-            <script type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-            </script>
-            <script type="text/javascript">
-            (function(){
-            emailjs.init({
-            publicKey: "Mp5hatxGAhmyhI6pe",
-            });
-            })();
-            </script>
-
+          <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+     (function(){
+        emailjs.init({
+          publicKey: "Mp5hatxGAhmyhI6pe",
+        });
+     })();
+  </script>
+           
+              <!-- Contact form -->
         <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
@@ -1126,7 +1126,7 @@
 
             <textarea id="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
             
-            <button class="form-btn" type="submit" disabled data-form-btn onclick="SendMail()">
+            <button class="form-btn" type="submit" disabled data-form-btn onclick="sendMail()">
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
