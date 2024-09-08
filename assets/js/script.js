@@ -122,7 +122,7 @@ const formBtn = document.querySelector("[data-form-btn]");
 
 
 // SendMail function
-function SendMail(event) {
+function SendMail() {
   event.preventDefault(); // Prevent the default form submission
 
   // Send the form data using EmailJS
