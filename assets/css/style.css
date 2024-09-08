@@ -1408,7 +1408,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 270px;
     margin-bottom: 30px;
   }
 
@@ -1437,11 +1437,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   transition: transform 0.3s ease;
 
 }
-            /*  mobile    */
-@media (max-width: 480px) {
-  .avatar-box {
-    margin-bottom: 10px; /* Further reduced margin */
-  }}
+
   .info-content .name { margin-bottom: 15px; margin-top: 20px;  }
 
   .info-content .title { padding: 5px 18px; }
