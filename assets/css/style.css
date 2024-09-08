@@ -1437,7 +1437,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   transition: transform 0.3s ease;
 
 }
-
+            /*  mobile    */
 @media (max-width: 480px) {
   .avatar-box {
     margin-bottom: 10px; /* Further reduced margin */
