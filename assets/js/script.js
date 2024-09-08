@@ -1,6 +1,6 @@
 'use strict';
 
-
+emailjs.init('Mp5hatxGAhmyhI6pe');
 
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
@@ -161,18 +161,17 @@ for (let i = 0; i < navigationLinks.length; i++) {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
 
-  // Collect the form data
-  const formData = {
-    fullname: this.fullname.value,
-    email: this.email.value,
-    message: this.message.value
-  };
 
-  // Send the email using EmailJS
-  emailjs.send('service_413', 'template_413', formData)
+  // Handle contact form submission
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Send the form data using EmailJS
+  emailjs.sendForm('service_413', 'template_413', this)
     .then(function(response) {
       alert('Message sent successfully!');
     }, function(error) {
       alert('Failed to send message, please try again.');
     });
-});
+})
+})
