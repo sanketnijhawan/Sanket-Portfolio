@@ -139,28 +139,38 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
     // Emailjs
-const sendMail = () => {
-  const params = {
-    name: document.getElementById("fullName").value,
-    email: document.getElementById("email_id").value,
-    message: document.getElementById("message").value,
-  };
-
- 
-
-  const serviceID = "service_413";
-  const templateID = "template_dvgicpt";
-
-  emailjs.send(serviceID, templateID, params)
-    .then(res => {
-      document.getElementById("fullName").value = "";
-      document.getElementById("email_id").value = "";
-      document.getElementById("message").value = "";
-      console.log(res);
-      alert("Your message sent successfully!!");
-    })
-    .catch(err => console.log(err));
-};
+    const sendMail = () => {
+      const params = {
+        from_name: document.getElementById("fullName").value,
+        email_id: document.getElementById("email_id").value,
+        message: document.getElementById("message").value,
+      };
+    
+      const serviceID = "service_413";
+      const templateID = "template_dvgicpt";
+    
+      emailjs.send(serviceID, templateID, params)
+        .then(res => {
+          document.getElementById("fullName").value = "";
+          document.getElementById("email_id").value = "";
+          document.getElementById("message").value = "";
+          console.log(res);
+          alert("Your message sent successfully!!");
+        })
+        .catch(err => console.log(err));
+    };
+    
+    formInputs.forEach(input => {
+      input.addEventListener("input", () => {
+        formBtn.disabled = !form.checkValidity();
+      });
+    });
+    
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      sendMail();
+    });
+    
 
 formInputs.forEach(input => {
   input.addEventListener("input", () => {

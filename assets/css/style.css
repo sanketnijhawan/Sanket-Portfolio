@@ -292,6 +292,9 @@ article.active {
   z-index: -1;
 }
 
+/* --------------------------
+ #Light Mode
+ ------------------------- */
 
 
 
@@ -332,7 +335,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
+  /* background: var(--bg-gradient-onyx); */
   border-radius: 20px;
 }
 
@@ -1416,7 +1419,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { gap: 25px; }
 
-  .avatar-box { border-radius: 30px; }
+  .avatar-box { border-radius:30px; }
 
   .avatar-box img { width: 120px; }
   /* Keyframes for subtle scale animation */
@@ -1428,42 +1431,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     transform: scale(1.05); /* Slightly grow in the middle */
   }
 }
-
-/* Apply the animation to the avatar */
-.professional-avatar {
-  animation: subtle-scale 3s ease-in-out infinite;  /* Smooth 3-second pulse, continuous */
-  width: 120px;              /* Keep the same width */
-  border-radius: 40px;      /* Keep the same border-radius */
-  transition: transform 0.3s ease;
-
-}
-
-  .info-content .name { margin-bottom: 15px; margin-top: 20px;  }
-
-  .info-content .title { padding: 5px 18px; }
-
-  .info_more-btn {
-    top: -30px;
-    right: -30px;
-    padding: 10px 15px;
-  }
-
-  .info_more-btn span {
-    display: block;
-    font-size: var(--fs-8);
-  }
-
-  .info_more-btn ion-icon { display: none; }
-
-  .separator { margin: 32px 0; }
-
-  .contacts-list { gap: 20px; }
-
-  .contact-info {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
-  }
-
 
 
   /**
@@ -1932,7 +1899,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img { width: 150px;
+  /* display: flex;
+align-items: center;
+justify-content: center; */
+transform: scale(1.7);
+ }
 
   .info-content .name {
     white-space: nowrap;
