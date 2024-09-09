@@ -30,6 +30,8 @@ const modalImg = document.querySelector("[data-modal-img]");
 const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
+
+
 // modal toggle function
 const testimonialsModalFunc = function () {
   modalContainer.classList.toggle("active");
@@ -172,16 +174,8 @@ for (let i = 0; i < formInputs.length; i++) {
     });
     
 
-formInputs.forEach(input => {
-  input.addEventListener("input", () => {
-    formBtn.disabled = !form.checkValidity();
-  });
-});
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  sendMail();
-});
+
 
 
 // page navigation variables
