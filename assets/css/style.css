@@ -1899,11 +1899,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px;
+  .avatar-box img { width: 200px;
   /* display: flex;
 align-items: center;
 justify-content: center; */
-transform: scale(1.7);
+transform: scale(1.3);
  }
 
   .info-content .name {
