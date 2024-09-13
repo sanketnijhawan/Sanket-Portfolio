@@ -362,10 +362,10 @@ main {
   top: 15px;
   right: 15px;
   border-radius: 0 20px;
-  font-size: 20px;
+  font-size: 15px;
   color: var(--orange-yellow-crayola);
   background: var(--border-gradient-onyx);
-  padding: 20px;
+  padding: 15px;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
   z-index: 1;
