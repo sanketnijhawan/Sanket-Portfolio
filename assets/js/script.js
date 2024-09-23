@@ -147,21 +147,31 @@ for (let i = 0; i < formInputs.length; i++) {
         email_id: document.getElementById("email_id").value,
         message: document.getElementById("message").value,
       };
-    
+
       const serviceID = "service_413";
       const templateID = "template_dvgicpt";
-    
+
       emailjs.send(serviceID, templateID, params)
         .then(res => {
           document.getElementById("fullName").value = "";
           document.getElementById("email_id").value = "";
           document.getElementById("message").value = "";
           console.log(res);
-          alert("Your message sent successfully!!");
+          showMailAnimation(); // Call the correct function here
         })
-        .catch(err => console.log(err));
+        .catch(err => console.error('Error:', err));
     };
-    
+
+    // Function to show the custom popup
+    function showMailAnimation() {
+      const animation = document.querySelector('.mail-sent-animation');
+      animation.classList.add('active');
+      
+      // Hide animation after it's done (5 seconds)
+      setTimeout(() => {
+        animation.classList.remove('active');
+      }, 5000);
+    }  
     formInputs.forEach(input => {
       input.addEventListener("input", () => {
         formBtn.disabled = !form.checkValidity();

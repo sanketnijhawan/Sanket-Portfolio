@@ -432,6 +432,57 @@ main {
 
 .contact-info address { font-style: normal; }
 
+
+
+.mail-sent-animation {
+  position: fixed;
+  top: 85%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  background-color: var(--smoky-black);
+  border: 2px solid var(--orange-yellow-crayola);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.mail-sent-animation.active {
+  opacity: 1; /* Make it visible */
+  animation: sendMail 5s ease forwards; /* Add animation */
+}
+
+.mail-sent-animation i {
+  font-size: 24px;
+  color: var(--orange-yellow-crayola);
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.success-message {
+  color: var(--orange-yellow-crayola); /* Message text color */
+  font-size: 16px; /* Adjust size as needed */
+  font-weight: bold; /* Make it bold */
+}
+
+/* Mail flying animation */
+@keyframes sendMail {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -60%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -80%) scale(0.5);
+    opacity: 0;
+  }
+}
+
+
 .social-list {
   display: flex;
   justify-content: flex-start;
