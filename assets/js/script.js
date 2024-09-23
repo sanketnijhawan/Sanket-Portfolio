@@ -54,6 +54,7 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 }
 
+
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
@@ -115,8 +116,12 @@ for (let i = 0; i < filterBtn.length; i++) {
     lastClickedBtn = this;
 
   });
+  
 
 }
+
+
+
 
 
 
@@ -139,6 +144,9 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
+
+
+
 
     // Emailjs
     const sendMail = () => {
