@@ -165,6 +165,11 @@ for (let i = 0; i < formInputs.length; i++) {
     // Function to show the custom popup
     function showMailAnimation() {
       const animation = document.querySelector('.mail-sent-animation');
+
+    // Sound effect
+      const successSound = document.getElementById('successSound'); // Get the audio element
+      successSound.play(); // Play the sound
+
       animation.classList.add('active');
       
       // Hide animation after it's done (5 seconds)

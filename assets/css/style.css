@@ -436,11 +436,11 @@ main {
 
 .mail-sent-animation {
   position: fixed;
-  top: 85%; /* Center vertically */
-  left: 50%; /* Center horizontally */
+  top: 87%; /* Center vertically */
+  left: 55%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Adjust for centering */
-  background-color: var(--smoky-black);
-  border: 2px solid var(--orange-yellow-crayola);
+  background-color: var(---border-gradient-onyx);
+  border: 2px solid var( --vegas-gold);
   border-radius: 8px;
   padding: 10px;
   display: flex;
@@ -457,12 +457,12 @@ main {
 
 .mail-sent-animation i {
   font-size: 24px;
-  color: var(--orange-yellow-crayola);
+  color: var(--vegas-gold);
   margin-right: 10px; /* Space between icon and text */
 }
 
 .success-message {
-  color: var(--orange-yellow-crayola); /* Message text color */
+  color: var(--vegas-gold); /* Message text color */
   font-size: 16px; /* Adjust size as needed */
   font-weight: bold; /* Make it bold */
 }
